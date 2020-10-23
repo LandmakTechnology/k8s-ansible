@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-south-1"
+  region = "ca-central-1"
 }
 resource "aws_vpc" "kubernetes" {
   cidr_block = var.vpc_cidr

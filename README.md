@@ -49,7 +49,7 @@ $ pip3 install boto3 --user
 
 #### Clone terraform and ansible scripts
 ``` sh
-$ git clone https://github.com/MithunTechnologiesDevOps/Kuberentes_Cluster_Terraform_Ansible.git
+$ git clone https://github.com/LandmakTechnology/k8s-ansible.git
 $ cd Kuberentes_Cluster_Terraform_Ansible
 ```
 ###### <span style="color:orange"> Update Your Key Name in variables.tf file before executing terraform script </span>

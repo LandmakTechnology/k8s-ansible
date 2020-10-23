@@ -3,7 +3,7 @@ variable "aws_region" {
 }
 
 variable "key_name" {
-  default = "DevOps"
+  default = "ca21"
 }
 variable "vpc_cidr" {
   default = "172.0.0.0/24"

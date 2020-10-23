@@ -1,5 +1,5 @@
 variable "aws_region" {
-  default = "ap-south-1"
+  default = "ca-central-1"
 }
 
 variable "key_name" {
@@ -14,10 +14,10 @@ variable "subnets_cidr" {
 }
 variable "availability_zones" {
   type    = list(string)
-  default = ["ap-south-1a", "ap-south-1b"]
+  default = ["ca-central-1a", "ca-central-1b"]
 }
 variable "kubernetes_ami" {
-  default = "ami-0b44050b2d893d5f7"
+  default = "ami-0c27a26eca5dc74fc"
 }
 variable "master_instance_type" {
   default = "t2.medium"

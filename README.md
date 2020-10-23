@@ -1,7 +1,7 @@
 
-#  **<span style="color:green">Mithun Technologies, Marathahalli ,Bengaluru.</span>**
-### **<span style="color:green">Contacts: +91-9980923226, +91-8296242028<br> WebSite : <http://mithuntechnologies.co.in/></span>**
-### **Email: devopstrainingblr@gmail.com, devopstrainingblr@outlook.com**
+#  **<span style="color:green">Landmark Technology.</span>**
+### **<span style="color:green">Contacts: +1437215 24 83   +1 437 218 2483 <br> WebSite : <http://mylandmarktech.com/></span>**
+### **Email: mylandmarktech@gmail.com         mylandmarktech@gmail.com**
 
 
 ## **Agenda: Infrastructure Automation Using Terraform And K8's Cluster Configuration Using Ansible With Dynamic Inventory.**

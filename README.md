@@ -73,7 +73,7 @@ $ terraform apply --auto-approve terafrom_scripts/
 $ chmod +x DynamicInventory.py
 #Add default Region so that DynamicInventory will fetch host details from that Region.
 # temporally
-$ export AWS_DEFAULT_REGION=ap-south-1
+$ export AWS_DEFAULT_REGION=ca-central-1
 # Or Permanently
 #Create config file in current user .aws folder And below content.
 $ mkdir ~/.aws

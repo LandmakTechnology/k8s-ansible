@@ -1,7 +1,7 @@
 #!/bin/python
 # Shebang Line Should Point Python Installation Path
 """
-Author Mithun Technologies
+Author Landmark Technologies
 Fetech List of Servers from AWS and group based on EC2
 instance tag name and value.
 """

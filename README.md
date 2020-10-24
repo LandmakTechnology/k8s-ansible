@@ -4,7 +4,7 @@
 ### **Email: mylandmarktech@gmail.com         mylandmarktech@gmail.com**
 
 
-## **Agenda: Infrastructure Automation Using Terraform And K8's Cluster Configuration Using Ansible With Dynamic Inventory.**
+## **Agenda: Infrastructure Automation Using Terraform and Ansible With Dynamic Inventory to configure a Kubernetes Cluster**
 ## Terraform, Ansible Installation And Setup In AWS EC2 Redhat Instnace.
 ##### Prerequisite
 + AWS Acccount.

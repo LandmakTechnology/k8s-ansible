@@ -17,31 +17,31 @@
 
 ### Create User To Install Ansible & Terraform
 ``` sh
-$ sudo useradd ansible
-$ echo "ansible  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible
-$ sudo su ansible
+ sudo useradd ansible
+ echo "ansible  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible
+ sudo su ansible
 ```
 ### Install Terraform
 
 ``` sh
-$ sudo su ansible
-$ sudo yum install wget unzip -y
-$ wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
-$ sudo unzip terraform_0.12.26_linux_amd64.zip -d /usr/local/bin/
+ sudo su ansible
+ sudo yum install wget unzip -y
+ wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
+ sudo unzip terraform_0.12.26_linux_amd64.zip -d /usr/local/bin/
 # Export terraform binary path temporally
-$ export PATH=$PATH:/usr/local/bin
+ export PATH=$PATH:/usr/local/bin
 # Add path permanently for current user.By Exporting path in .bashrc file at end of file.
 $ vi .bashrc
    export PATH="$PATH:/usr/local/bin"
 # Source .bashrc to reflect for current session
-$ source ~/.bashrc   
+ source ~/.bashrc   
 
 # terraform installation in ubuntu 
 $ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 
-$ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 
-$ sudo apt-get update && sudo apt-get install terraform
+ sudo apt-get update && sudo apt-get install terraform
 ```
 
 ### Ansible Installation
@@ -56,35 +56,34 @@ $ pip3 install boto3 --user
 
 #### Clone terraform and ansible scripts
 ``` sh
-$ git clone https://github.com/LandmakTechnology/k8s-ansible.git
-$ cd Kuberentes_Cluster_Terraform_Ansible
+ git clone https://github.com/LandmakTechnology/k8s-ansible.git
+ cd Kuberentes_Cluster_Terraform_Ansible
 ```
 ###### <span style="color:orange"> Update Your Key Name in variables.tf file before executing terraform script </span>
 ## Infrastructure As A Code
 #### Create Infrastructure(VPC,Subnets,Route Tables,EC2 Instnaces ..etc) As A Code Using Terraform Scripts
 ``` sh
 # Initialise to install plugins
-$ terraform init terafrom_scripts/
-# Validate teffaform scripts
-$ terraform validate terafrom_scripts/
+ terraform init terafrom_scripts/
+# Validate teffaform scripts$ terraform validate terafrom_scripts/
 # Plan terraform scripts which will list resouce which will be created
-$ terraform plan terafrom_scripts/
+ terraform plan terafrom_scripts/
 # Apply to create resources
-$ terraform apply --auto-approve terafrom_scripts/
+ terraform apply --auto-approve terafrom_scripts/
 ```
 
 ## Configuration Management
 
 #### Check If DynamicInventory Script works.
 ```sh
-$ chmod +x DynamicInventory.py
+ chmod +x DynamicInventory.py
 #Add default Region so that DynamicInventory will fetch host details from that Region.
 # temporally
-$ export AWS_DEFAULT_REGION=us-west-2
+ export AWS_DEFAULT_REGION=us-west-2
 # Or Permanently
 #Create config file in current user .aws folder And below content.
-$ mkdir ~/.aws
-$ vi ~/.aws/config
+ mkdir ~/.aws
+ vi ~/.aws/config
 [default]
 region=us-west-2
 
@@ -95,16 +94,16 @@ $ ./DynamicInventory.py --list
 </span>
 
 ```sh
-$ vi DevOps.pem
-$ chmod 400 DevOps.pem
+ vi key.pem
+ chmod 400 key.pem
 ```
 - ###### <span style="color:orange">Replace \<Pemfile> with your pemfile path in server
 </span>
 
 ```sh
-$ ansible-playbook -i DynamicInventory.py site.yml -u ubuntu --private-key=<PemFilePath>  --ssh-common-args='-o StrictHostKeyChecking=no'
+ ansible-playbook -i DynamicInventory.py site.yml -u ubuntu --private-key=<PemFilePath>  --ssh-common-args='-o StrictHostKeyChecking=no'
 ```
 ##  Destroy Infrastructure  
 ```sh
-$ terraform destroy --auto-approve terafrom_scripts/
+ terraform destroy --auto-approve terafrom_scripts/
 ```

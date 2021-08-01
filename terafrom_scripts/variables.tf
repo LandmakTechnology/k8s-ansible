@@ -3,7 +3,7 @@ variable "aws_region" {
 }
 
 variable "key_name" {
-  default = "key22"
+  default = "key24"
 }
 variable "vpc_cidr" {
   default = "172.0.0.0/24"
@@ -17,7 +17,7 @@ variable "availability_zones" {
   default = ["us-west-2a", "us-west-2b"]
 }
 variable "kubernetes_ami" {
-  default = "ami-07a29e5e945228fa1 "
+  default = "ami-090717c950a5c34d3"
 }
 variable "master_instance_type" {
   default = "t2.medium"

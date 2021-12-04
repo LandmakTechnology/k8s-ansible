@@ -51,12 +51,12 @@ $ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 
 ### Ansible Installation
 ``` sh
-$ sudo su ansible
-$ sudo yum install python3 -y
-$ sudo alternatives --set python /usr/bin/python3
-$ sudo yum -y install python3-pip -y
-$ pip3 install ansible --user
-$ pip3 install boto3 --user
+ sudo su ansible
+ sudo yum install python3 -y
+ sudo alternatives --set python /usr/bin/python3
+ sudo yum -y install python3-pip -y
+ pip3 install ansible --user
+ pip3 install boto3 --user
 ```
 
 #### Clone terraform and ansible scripts

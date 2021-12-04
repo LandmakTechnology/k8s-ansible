@@ -21,6 +21,11 @@
  echo "ansible  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible
  sudo su ansible
 ```
+### Enable password authentication and assign password to ansible user
+``` sh
+sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+sudo service sshd restart
+sudo passwd ansible
 ### Install Terraform
 
 ``` sh

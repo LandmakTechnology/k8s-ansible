@@ -27,9 +27,10 @@ sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication
 sudo service sshd restart
 sudo passwd ansible
 ### Install Terraform
-
+```
+##### Install terraform
 ``` sh
- sudo su ansible
+ sudo su - ansible
  sudo yum install wget unzip -y
  wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
  sudo unzip terraform_0.12.26_linux_amd64.zip -d /usr/local/bin/

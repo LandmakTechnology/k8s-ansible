@@ -3,7 +3,7 @@ variable "aws_region" {
 }
 
 variable "key_name" {
-  default = "key24"
+  default = "akumkey"
 }
 variable "vpc_cidr" {
   default = "172.0.0.0/24"
